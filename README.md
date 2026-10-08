@@ -1,5 +1,7 @@
 # Community Agent Skills
 
+[![Validate skills](https://github.com/Cutseven/community-agent-skills/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/Cutseven/community-agent-skills/actions/workflows/validate.yml)
+
 Ten free, MIT-licensed [Agent Skills](https://agentskills.io) for everyday work: inbox triage, finding files, scheduling meetings, tracking subscriptions, meal planning, backups, task capture, translation and summaries, batch file jobs, and careful Cloudflare administration.
 
 They follow the open Agent Skills format (`skills/<name>/SKILL.md` with `name` and `description` frontmatter), so the same folders work in Claude Code, Claude.ai, OpenAI Codex, Cursor, GitHub Copilot, Gemini CLI, Grok Build, and other tools that read the format. Each skill also has a plain copy-paste prompt in [`prompts/`](prompts/) for chatbots that don't support skills.
