@@ -4,7 +4,7 @@ Ten free, MIT-licensed [Agent Skills](https://agentskills.io) for everyday work:
 
 They follow the open Agent Skills format (`skills/<name>/SKILL.md` with `name` and `description` frontmatter), so the same folders work in Claude Code, Claude.ai, OpenAI Codex, Cursor, GitHub Copilot, Gemini CLI, Grok Build, and other tools that read the format. Each skill also has a plain copy-paste prompt in [`prompts/`](prompts/) for chatbots that don't support skills.
 
-This is the any-agent edition of [Cutseven/grok-community-skills](https://github.com/Cutseven/grok-community-skills). The Grok edition is packaged as a Grok Build plugin and is listed in xAI's plugin marketplace.
+This is the any-agent edition of [Cutseven/grok-community-skills](https://github.com/Cutseven/grok-community-skills). The Grok edition is packaged as a Grok Build plugin, has been submitted to xAI's plugin marketplace ([pending review](https://github.com/xai-org/plugin-marketplace/pull/1276)), and adds two Grok-only extras: a hook that asks before destructive shell commands and a read-only subagent for untrusted content.
 
 ## Skills
 
@@ -122,7 +122,7 @@ Docs: [Agent Skills (Gemini CLI)](https://geminicli.com/docs/cli/skills/)
 
 Grok Build reads skills from `~/.grok/skills/`, `./.grok/skills/` and `~/.agents/skills/`, and also reads Claude Code and Cursor skill folders. Skills appear as slash commands, for example `/smart-inbox-triage`.
 
-On Grok you can instead install the [Grok edition](https://github.com/Cutseven/grok-community-skills) as a plugin from xAI's plugin marketplace.
+On Grok you can instead install the [Grok edition](https://github.com/Cutseven/grok-community-skills) as a plugin: `grok plugin install Cutseven/grok-community-skills --trust` (or from xAI's plugin marketplace once it's listed).
 
 Docs: [Skills, Plugins & Marketplaces (Grok Build)](https://docs.x.ai/build/features/skills-plugins-marketplaces)
 
