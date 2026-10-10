@@ -2,7 +2,7 @@
 
 [![Validate skills](https://github.com/Cutseven/community-agent-skills/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/Cutseven/community-agent-skills/actions/workflows/validate.yml)
 
-Ten free, MIT-licensed [Agent Skills](https://agentskills.io) for everyday work: inbox triage, finding files, scheduling meetings, tracking subscriptions, meal planning, backups, task capture, translation and summaries, batch file jobs, and careful Cloudflare administration.
+Eleven free, MIT-licensed [Agent Skills](https://agentskills.io) for everyday work: inbox triage, finding files, scheduling meetings, tracking subscriptions, meal planning, backups, task capture, translation and summaries, batch file jobs, careful Cloudflare administration, and careful UniFi network administration.
 
 They follow the open Agent Skills format (`skills/<name>/SKILL.md` with `name` and `description` frontmatter), so the same folders work in Claude Code, Claude.ai, OpenAI Codex, Cursor, GitHub Copilot, Gemini CLI, Grok Build, and other tools that read the format. Each skill also has a plain copy-paste prompt in [`prompts/`](prompts/) for chatbots that don't support skills.
 
@@ -22,6 +22,7 @@ This is the any-agent edition of [Cutseven/grok-community-skills](https://github
 | [`context-translator-summarizer`](skills/context-translator-summarizer/SKILL.md) | Translates for meaning, then gives a bullet summary and glossary | [prompt](prompts/context-translator-summarizer.md) |
 | [`batch-task-runner`](skills/batch-task-runner/SKILL.md) | Chains rename/convert/resize/compress/zip jobs, with a dry-run preview first | [prompt](prompts/batch-task-runner.md) |
 | [`cloudflare-infra-worker`](skills/cloudflare-infra-worker/SKILL.md) | Read-first Cloudflare engineer: DNS, Workers/Pages, WAF, SSL/TLS, Tunnel/Access; changes only in EXECUTE mode, with previews, rollback plans and explicit confirmation for destructive actions | [prompt](prompts/cloudflare-infra-worker.md) |
+| [`unifi-network-admin`](skills/unifi-network-admin/SKILL.md) | Careful UniFi network admin: read-only by default, one approved change at a time with backup, verification and rollback; troubleshooting, severity-ranked reports, quiet scheduled health checks | [prompt](prompts/unifi-network-admin.md) |
 
 ## How they work
 
@@ -33,6 +34,7 @@ Every skill follows the same rules:
 
 - It never sends, posts, deletes, moves, or overwrites anything until you've seen exactly what will happen and said yes.
 - Content from emails, files, statements, and web pages is treated as data, never as instructions.
+- `unifi-network-admin` is read-only by default and makes one change at a time, each only after you approve its written change proposal.
 - `cloudflare-infra-worker` is read-only by default. It changes nothing until you switch it to EXECUTE mode, and destructive or high-risk actions still need a specific confirmation.
 
 ## Install
